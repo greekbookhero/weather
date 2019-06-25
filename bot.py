@@ -65,8 +65,6 @@ def main():
                 chat_id=answer['chat_id']
                 text =answer['text']
                 text=text.lower()
-                uin=get_city_id(text)
-                send_message(chat_id,get_pogoda(uin))
                 if text=='/start':
                     send_message(chat_id,'Здравствуйте! Я могу показать погоду любого города . Напишите название города, который вам нужен, пожалуйста.')
                 else:
