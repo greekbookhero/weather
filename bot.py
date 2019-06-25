@@ -69,8 +69,14 @@ def main():
                 send_message(chat_id,get_pogoda(uin))
                 if text=='/start':
                     send_message(chat_id,'Здравствуйте! Я могу показать погоду любого города . Напишите название города, который вам нужен, пожалуйста.')
-                if text=="кто пидр?":
+                else:
+                        uin=get_city_id(text)
+                        send_message(chat_id,get_pogoda(uin))
+                if text=="Кто пидр?":
                     send_message(chat_id,"Конечно же Дарын")
+                else:
+                        uin=get_city_id(text)
+                        send_message(chat_id,get_pogoda(uin))
             else:
                 continue
 
